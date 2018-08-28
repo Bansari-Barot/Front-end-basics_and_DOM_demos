@@ -3,11 +3,239 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- What else should be in the head? -->
-  <title>Name of Your Restaurant</title>
+  <title>GLobal 360</title>
   <!--  Internal style sheet goes here  -->
+  <style>
+
+  body {margin: 0;}
+
+  ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: ##3333331f;
+    background-image:url();
+  }
+
+  ul.topnav li {float:right;}
+
+  ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 30px 40px;
+    text-decoration:inherit;
+  }
+
+  ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+  ul.topnav li a.active {background-color: #4CAF50;}
+
+  ul.topnav li.right {
+    float: center;
+    color:red;
+    text-align: center;
+    display: flow-root;
+    text-decoration-style: wavy;
+  }
+
+  ul.topnav li.right a{
+
+    color:red;
+    text-align: center;
+    display: flow-root;
+    text-decoration-style: wavy;
+
+
+  }
+
+  @media screen and (max-width: 600px){
+    ul.topnav li.right,
+    ul.topnav li {float: none;}
+  }
+  #banner{
+    /* background: url(/img/bg_img.jpg) no-repeat center top; */
+    background-size: cover;
+    min-height: 630px;
+  }
+  .bg-color{
+    /* background-color: RGBA(0, 0, 0, 0.61); */
+     background-color:#03a9f4;
+    min-height: 0px;
+  }
+
+  .section-padding{
+    padding: 60px 0px;
+    }
+    .logo-name{
+    font-family: 'Satisfy', sans-serif;
+    font-size: 20px;
+    margin-top: 0px;
+    color: #FFB03B;
+    float: left;
+    text-align: left;
+    display: flow-root;
+    text-decoration-style: wavy;
+    text-shadow:2px 2px #FFB03B;
+  }
+
+  .header-h {
+        font-size: 50px;
+        font-style: italic;
+        font-family: fantasy;
+        font-weight: bolder;
+        text-align: center;
+        text-shadow:2px 2px #FFB03B;
+
+    }
+    .header-h1 {
+          font-size: 25px;
+          font-style: italic;
+          font-family: fantasy;
+          font-weight: bolder;
+          text-align: center;
+          text-shadow:2px 2px #03a9f4;
+
+      }
+    .header-p, body{
+        font-size: 20px;
+        font-style: italic;
+        font-family: fantasy;
+        font-weight: bolder;
+        text-align: center;
+        text-shadow:1px 1px #03a9f4;
+    }
+    .about-info, .mr-15{
+        margin-bottom: 10px;
+    }
+
+
+    .menu-restaurant{
+    width: 50%;
+    float: left;
+    padding: 15px;
+    position: relative;
+}
+.menu-restaurant .menu-title {
+    float: left;
+    font-family: Montserrat,arial;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #FFB03B;
+}
+.menu-restaurant .menu-line {
+    position: absolute;
+    bottom: 6px;
+    border-bottom: 1px dotted rgba(0,0,0,.3);
+    margin-left: .6rem;
+    margin-right: .6rem;
+}
+.menu-restaurant .menu-price {
+    font-weight: 600;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.menu-restaurant .menu-subtitle {
+    display: block;
+    float: left;
+    color: #B1B1B1;
+    font-family: Satisfy,'Open Sans',arial;
+    font-size: 1.2rem;
+  }
+  .menu-restaurant span.clearfix {
+    position: relative;
+    display: block;
+  }
+
+  #menu-flters ul li a.active, #menu-flters ul li a:hover {
+    background: #FFB03B;
+    color: #fff;
+    border: 1px solid #FFB03B;
+  }
+  #menu-flters ul li {
+    display: inline-block;
+    color: #fff;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+  }
+  #menu-flters ul li a {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #565656;
+    border-radius: 0px;
+    border: 1px solid #BBBBBB;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+  </style>
 </head>
 <body>
+  <section>
+    <div class="bg-color">
+    <header id="header">
+      <ul class="topnav">
+
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#Menu">Menu</a></li>
+        <!-- <li><a class="" href="#home">Home</a></li> -->
+        <li class="logo-name"><a href="#index">Global 360</a></li>
+      </ul>
+    </div>
+    </header
+  </section>
+
+
+  <!--about-->
+  <section id="about" class="section-padding">
+    <div class="container">
+          <h1 class="header-h">Global 360</h1>
+          <p class="header-p">Global journey of food from all around the world. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/about-->
+
+  <!-- menu -->
+  <section id="Menu" class="section-padding">
+    <!-- <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center marb-35"> -->
+          <h1 class="header-h">Menu</h1>
+
+
+
+
+
+
+  </section>
+  <!--/ menu -->
+
+  <section id="contact" class="section-padding">
+
+          <h1 class="header-h">Contact Us</h1>
+          <h3 class="header-h1">Open Hours</h1>
+          <span><p class="header-p">Weekdays: 9:00am to 9:30pm Weekends: 9:00am to 10:30pm </p></span>
+
+
+
+
+
+  </section>
+
+
+
+
+
   <!-- Your content here! -->
   <!-- Don't forget to structure it! -->
 </body>
