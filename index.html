@@ -68,7 +68,8 @@
   }
 
   .section-padding{
-    padding: 60px 0px;
+    padding: 10px 0px;
+
     }
     .logo-name{
     font-family: 'Satisfy', sans-serif;
@@ -100,13 +101,22 @@
           text-shadow:2px 2px #03a9f4;
 
       }
+      .header-h2 {
+            font-size: 15px;
+            font-style:normal;
+            font-family:monospace;
+            font-weight:lighter;
+            text-align: center;
+            text-shadow:0.5px 0.5px #03a9f4;
+
+        }
     .header-p{
-        font-size: 20px;
+        font-size: 15px;
         font-style: italic;
-        font-family: fantasy;
-        font-weight: bolder;
+        font-family:monospace;
+        font-weight: lighter;
         text-align: center;
-        text-shadow:1px 1px #03a9f4;
+        text-shadow:0.5px 0.5px #03a9f4;
     }
     .about-info, .mr-15{
         margin-bottom: 10px;
@@ -115,7 +125,34 @@
     table {
 	     border-collapse: collapse;
 	      border-spacing: 0;
+        text-align: center;
     }
+    .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+
+  }
+
+/* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  table{
+    font-size: 15px;
+    font-style:oblique;
+    font-family:sans-serif;
+    font-weight:400;
+    text-align: center;
+    text-shadow:0.5px 0.5px #EC579D;
+
+
+  }
 
 
 
@@ -155,7 +192,7 @@
       <div class="row">
         <div class="col-md-12 text-center marb-35"> -->
           <h1 class="header-h">Menu</h1>
-          <table border="0" cellpadding="0" cellspacing="0" style="width:50%;float:left">
+          <table border="0" cellpadding="20px" cellspacing="20px" style="width:50%;float:left">
 
               <thead>
                 <tr>
@@ -165,16 +202,20 @@
               </thead>
               <tbody>
               <tr>
-                <td> 11</td>
-                <td> 12</td>
+                <td> Avacado and Goat cheese salad</td>
+                <td>$12.50</td>
               </tr>
               <tr>
-                <td> 21</td>
-                <td> 22</td>
+                <td>Egg and Bacon Panini</td>
+                <td>$12</td>
+              </tr>
+              <tr>
+                <td>Egg and Bacon Panini</td>
+                <td>$12</td>
               </tr>
             </tbody>
           </table>
-          <table border="0" cellpadding="0" cellspacing="0" style="width:50%;float:left">
+          <table border="0" cellpadding="20px" cellspacing="20px" style="width:50%;float:left">
             <thead>
               <tr>
                 <th colspan="2">Lunch</th>
@@ -183,17 +224,21 @@
             </thead>
             <tbody>
               <tr>
-                <td> 11</td>
-                <td> 12</td>
+                <td> Grilled Fish Fillet</td>
+                <td>$15</td>
               </tr>
               <tr>
-                <td> 21</td>
-                <td> 22</td>
+                <td>Global Chicken Schintzel</td>
+                <td>$14.50</td>
+              </tr>
+              <tr>
+                <td>Global Meat Balls</td>
+                <td>$14.50</td>
               </tr>
             </tbody>
           </table>
 
-          <table border="0" cellpadding="0" cellspacing="0" style="width:50%;float:left">
+          <table border="0" cellpadding="20px" cellspacing="20px" style="width:50%;float:left">
             <thead>
               <tr>
                 <th colspan="2">Dinner</th>
@@ -202,17 +247,21 @@
             </thead>
             <tbody>
               <tr>
-                <td> 11</td>
-                <td> 12</td>
+                <td>Roasted Tomato and Basil Soup</td>
+                <td>$13</td>
               </tr>
               <tr>
-                <td> 21</td>
-                <td> 22</td>
+                <td> Chicken Burger</td>
+                <td>$14.50</td>
+              </tr>
+              <tr>
+                <td> Veggie Burger</td>
+                <td>$14</td>
               </tr>
             </tbody>
           </table>
 
-          <table border="0" cellpadding="0" cellspacing="0" style="width:50%;float:left">
+          <table border="0" cellpadding="20px" cellspacing="20px" style="width:50%;float:left">
             <thead>
               <tr>
                 <th colspan="2">Drinks</th>
@@ -221,34 +270,44 @@
             </thead>
             <tbody>
               <tr>
-                <td> 11</td>
-                <td> 12</td>
+                <td>Long Island Tea</td>
+                <td>$10.50</td>
               </tr>
               <tr>
-                <td> 21</td>
-                <td> 22</td>
+                <td>Vodkatini</td>
+                <td>$10</td>
+              </tr>
+              <tr>
+                <td>Martini</td>
+                <td>$10</td>
               </tr>
             </tbody>
           </table>
-
-
-
-
-
   </section>
   <!--/ menu -->
-
-  <section id="contact" class="section-padding">
+<br><br><br>
+  <section id="contact" class="section-padding" style="padding-top:20px">
 
           <h1 class="header-h">Contact Us</h1>
           <h3 class="header-h1">Open Hours</h1>
-          <span><p class="header-p">Weekdays: 9:00am to 9:30pm Weekends: 9:00am to 10:30pm </p></span>
-
-
-
-
-
+          <pre class="header-p">Weekdays: 9:00am to 9:30pm       &        Weekends: 9:00am to 10:30pm </pre>
   </section>
+
+
+
+<section>
+  <div class="row">
+  <div class="column" >
+    <h2 class="header-h2">Location</h2>
+    <pre class="header-p">2nd Grant Ave,
+      San Francisco, CA 94108 </pre>
+  </div>
+  <div class="column">
+    <h2 class="header-h2">Contact Number</h2>
+    <pre class="header-p">(854)238-0819</pre>
+  </div>
+  </div>
+</section>
 
 
 
