@@ -69,6 +69,69 @@ function initButtons() {
 
 /* Takes the content from the text areas and adds
  to the quesiton list */
+ var questions=[];
+ 
 function addQuestion() {
   // You provide the functionality.
+  if(question.value==""){
+		alert("please input a question");
+	}
+	else if(answer.value==""){
+		alert("please input an answer");
+	}else{
+		questions.push({question:question.value,answer:answer.value});
+		qCountSpan.innerHTML = questions.length;
+		//alert("Create question successfully");
+
+	}
 }
+
+function hideQuestionCreator(){
+	if(qCreator.classList.contains("hideStuff"))
+	   qCreator.classList.toggle("showStuff");
+
+	qCreator.classList.add("hideStuff");
+}
+
+
+function showQuestionCreator(){
+	if(!qCreator.classList.contains("showStuff"))
+	   qCreator.classList.toggle("showStuff");
+}
+
+function showAnswer(){
+	if(!currentA.classList.contains("showAnswer")){
+		currentA.classList.toggle("showAnswer");
+	}
+}
+
+function hideAnswer(){
+	if(currentA.classList.contains("hideAnswer")){
+		if(currentA.classList.contains("showAnswer"))
+			currentA.classList.toggle("showAnswer");
+
+	}
+	currentA.classList.add("hideAnswer");
+}
+
+function removeQuestion(){
+
+
+}
+
+function forward(){
+
+}
+
+function back() {
+
+}
+
+bForward.addEventListener("click",forward);
+bBack.addEventListener("click",back);
+bShow.addEventListener("click",showAnswer);
+bHideQC.addEventListener("click",hideQuestionCreator);
+bHideA.addEventListener("click",hideAnswer);
+bAddQ.addEventListener("click",addQuestion);
+bShowQC.addEventListener("click",showQuestionCreator);
+bRemove.addEventListener("click",removeQuestion);
