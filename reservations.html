@@ -30,8 +30,55 @@
   </section>
 
   <section id="reservation" class="section-padding">
-    <h2>Reservation for 5 or more people only</h2>
+    <h2>Reservation for 3 or more people only</h2>
+    <div class="container">
+  <form action="#reservation">
+    <div class="row">
+      <div class="col-25">
+        <label>First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label>Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label>Date Time</label>
+      </div>
+      <div class="col-75">
+        <input type="datetime" name="datetime" placeholder="Enter Time and Date..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label>Number of People</label>
+      </div>
+      <div class="col-75">
+        <select name="number_of_people">
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Reserve">
+    </div>
+  </form>
+</div>
 
-
-
+  </section>
 </body>
