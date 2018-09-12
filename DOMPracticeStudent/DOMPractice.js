@@ -49,6 +49,15 @@ qIndexSpan = document.getElementById("qIndex");
 qCountSpan.innerHTML = questions.length;
 qIndexSpan.innerHTML = qIndex + 1;
 
+let question1 = document.getElementById("contentQ");
+let answer1 = document.getElementById("contentA");
+var questionId  = document.createElement("p");
+var answerId = document.createElement("p");
+question1.appendChild(questionId);
+answer1.appendChild(answerId)
+document.getElementsByTagName("body").onload = displayQuestion();
+
+
 // initialize buttons
 initButtons();
 
@@ -63,14 +72,20 @@ function initButtons() {
   // Forward and back Questions
   // Remove question
   // Add question
+  bForward.addEventListener("click",forward);
+  bBack.addEventListener("click",back);
+  bShow.addEventListener("click",showAnswer);
+  bHideQC.addEventListener("click",hideQuestionCreator);
+  bHideA.addEventListener("click",hideAnswer);
+  bAddQ.addEventListener("click",addQuestion);
+  bShowQC.addEventListener("click",showQuestionCreator);
+  bRemove.addEventListener("click",removeQuestion);
 }
 
 /* You may want to define functions like the following to attach to buttons */
 
 /* Takes the content from the text areas and adds
  to the quesiton list */
- var questions=[];
- 
 function addQuestion() {
   // You provide the functionality.
   if(question.value==""){
@@ -79,11 +94,22 @@ function addQuestion() {
 	else if(answer.value==""){
 		alert("please input an answer");
 	}else{
-		questions.push({question:question.value,answer:answer.value});
-		qCountSpan.innerHTML = questions.length;
-		//alert("Create question successfully");
-
+    var newQuestion = document.getElementById("Question").value;
+    var newAnswer = document.getElementById("Answer").value;
+    questions.push({question:newQuestion,answer:newAnswer});
+		questions.push({question:newQuestion.value,answer:newAnswer.value});
 	}
+}
+
+function displayQuestion(){
+  questionId.innerHTML = questions[qIndex].question;
+}
+
+function showAnswer(){
+  answerId.innerHTML = questions[qIndex].answer;
+
+  document.getElementById("contentA").classList.remove("hide");
+  document.getElementById("contentA").classList.add("show");
 }
 
 function hideQuestionCreator(){
@@ -99,39 +125,50 @@ function showQuestionCreator(){
 	   qCreator.classList.toggle("showStuff");
 }
 
-function showAnswer(){
-	if(!currentA.classList.contains("showAnswer")){
-		currentA.classList.toggle("showAnswer");
-	}
-}
 
 function hideAnswer(){
-	if(currentA.classList.contains("hideAnswer")){
-		if(currentA.classList.contains("showAnswer"))
-			currentA.classList.toggle("showAnswer");
 
-	}
-	currentA.classList.add("hideAnswer");
+  document.getElementById("contentA").classList.remove("show");
+  document.getElementById("contentA").classList.add("hide");
 }
 
 function removeQuestion(){
-
-
+  var index  = questions.indexOf(questions[qIndex])
+  if(index > -1){
+    questions.splice(index,1);
+    qCountSpan.innerHTML = questions.length;
+  }
+  if(qIndex < questions.length){
+  displayQuestion() = false;
+  }else{
+    displayQuestion();
+  }
 }
 
 function forward(){
+  if (questions.length <= 0) {
+      return;
+    }
+
+    if (qIndex < questions.length - 1) {
+      qIndex++;
+      qIndexSpan.innerHTML = qIndex + 1;
+    }
+    question1.innerHTML = `${questions[qIndex].question}`;
+    //answer1.innerHTML = `${questions[qIndex].answer}`;
 
 }
 
 function back() {
+  if (questions.length <= 0) {
+      return;
+    }
+
+    if (qIndex > 0 && qIndex < questions.length) {
+      qIndex--;
+      qIndexSpan.innerHTML = qIndex + 1;
+    }
+    question1.innerHTML = `${questions[qIndex].question}`;
+    //answer1.innerHTML = `${questions[qIndex].answer}`;
 
 }
-
-bForward.addEventListener("click",forward);
-bBack.addEventListener("click",back);
-bShow.addEventListener("click",showAnswer);
-bHideQC.addEventListener("click",hideQuestionCreator);
-bHideA.addEventListener("click",hideAnswer);
-bAddQ.addEventListener("click",addQuestion);
-bShowQC.addEventListener("click",showQuestionCreator);
-bRemove.addEventListener("click",removeQuestion);

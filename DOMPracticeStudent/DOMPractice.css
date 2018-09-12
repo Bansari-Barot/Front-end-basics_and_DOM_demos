@@ -34,8 +34,21 @@ textarea {
 }
 
 /* You may want to define a couple classes here to move the answer on and
-  off the screen. 
+  off the screen.
 */
+
+
+.hide{
+  position: relative;
+  left: 2000px;
+
+}
+
+.show{
+  position: relative;
+
+
+}
 
 
 
